@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1"
+	xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="Agenda01">
+		<class>br.com.hue.Usuario</class>
+		<properties>
+			<!-- Propriedades do JPA -->
+			<property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" /> <!-- nome completo da classe do Driver PostgreSQL de conexão -->
+			<property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/bd_lab_01" /> <!-- Define a localização do banco de dados e a base -->
+			<property name="javax.persistence.jdbc.user" value="postgres" /> <!-- usuario do banco de dados -->
+			<property name="javax.persistence.jdbc.password" value="123456" /> <!-- senha do usuario postgres -->
+
+			<!-- Propriedades do Hibernate -->
+			<property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQL9Dialect" /> <!-- Define qual variação do SQL será utilizada -->
+			<property name="hibernate.hbm2ddl.auto" value="update" /> <!-- Valida e exporta o esquema DDL para a base de dados -->
+			<property name="hibernate.show_sql" value="true" /> <!-- Define quando mostrar no log as consultas SQL geradas -->
+			<property name="hibernate.format_sql" value="true" /> <!-- Formata o log das consultas SQL geradas -->
+		</properties>
+	</persistence-unit>
+</persistence>
