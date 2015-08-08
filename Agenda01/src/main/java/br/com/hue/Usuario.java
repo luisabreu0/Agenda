@@ -1,11 +1,19 @@
 package br.com.hue;
 
+import java.io.Serializable;
+
+import javassist.SerialVersionUID;
+
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
 @Entity
-public class Usuario {
+public class Usuario implements Serializable {
 
-	
+	private static final long SerialVersionUID = 1L;
+	@Id
+	@GeneratedValue
 	private String nome;
 	private String telefone;
 	private String email;
