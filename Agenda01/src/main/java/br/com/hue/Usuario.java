@@ -2,21 +2,31 @@ package br.com.hue;
 
 import java.io.Serializable;
 
-import javassist.SerialVersionUID;
-
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
 public class Usuario implements Serializable {
 
-	private static final long SerialVersionUID = 1L;
+	private static final long serialVersionUID = 8353155058127356668L;
+
 	@Id
-	@GeneratedValue
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Long id;
+	
+	@Column
 	private String nome;
+	
+	@Column
 	private String telefone;
+	
+	@Column
 	private String email;
+	
+	@Column
 	private String endereco;
 
 	public String getNome() {
@@ -50,5 +60,4 @@ public class Usuario implements Serializable {
 	public void setEndereco(String endereco) {
 		this.endereco = endereco;
 	}
-
 }

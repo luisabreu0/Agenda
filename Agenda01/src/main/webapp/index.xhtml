@@ -8,7 +8,6 @@
 	xmlns:p="http://primefaces.org/ui">
 
 <h:head>
-	<!-- Alteração qualquer | Mais uma -->
 	<title>Agenda [versão 1.0]</title>
 </h:head>
 <h:body>
@@ -19,12 +18,10 @@
 					<h:outputLabel value="Cadastro de Usuarios" />
 				</f:facet>
 				<h:outputLabel value="Nome:" />
-				<h:inputText value="#{usuarioManagedBean.bean.nome}" />
-				
-
-			
+				<h:inputText value="#{usuarioManagedBean.usuario.nome}" />
 			</p:panelGrid>
-			<p:commandButton value="Gravar" action="#{usuarioManagedBean.cadastrar}" />
+			<p:commandButton value="Gravar"
+				action="#{usuarioManagedBean.cadastrar()}" />
 		</h:form>
 	</div>
 </h:body>
